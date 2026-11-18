@@ -1,0 +1,26 @@
+[
+  {
+    "question": "Como acompanhar meu pedido?",
+    "answer": "O cliente pode acompanhar o status do pedido na área de pedidos do aplicativo."
+  },
+  {
+    "question": "Como pedir reembolso?",
+    "answer": "A solicitação deve ser feita pelo canal oficial de suporte, informando o problema e os dados do pedido."
+  },
+  {
+    "question": "Como informar que um item veio faltando?",
+    "answer": "O cliente deve registrar o item faltante no suporte do pedido para análise."
+  },
+  {
+    "question": "Como informar que o pedido veio errado?",
+    "answer": "Se o pedido chegou diferente do solicitado, registre o problema no canal de suporte do próprio pedido e informe quais itens estão incorretos."
+  },
+  {
+    "question": "Como consultar um problema de pagamento?",
+    "answer": "Para dúvidas sobre cobrança, pagamento ou estorno, confira os detalhes da transação e procure o canal oficial de suporte do serviço. Não compartilhe senhas nem os dados completos do cartão."
+  },
+  {
+    "question": "Como solicitar o cancelamento de um pedido?",
+    "answer": "Consulte as opções e condições de cancelamento exibidas na tela do pedido. Se a opção não estiver disponível ou houver cobrança, procure o suporte oficial. Este protótipo não cancela pedidos."
+  }
+]
