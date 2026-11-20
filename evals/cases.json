@@ -1,0 +1,22 @@
+﻿[
+  {"message": "Meu pedido está atrasado e ainda não chegou", "expected_category": "atraso_entrega"},
+  {"message": "A entrega está demorando muito", "expected_category": "atraso_entrega"},
+  {"message": "O ENTREGADOR NAO CHEGOU", "expected_category": "atraso_entrega"},
+  {"message": "meu pedido tá demorando demais", "expected_category": "atraso_entrega"},
+  {"message": "Meu pedido veio errado", "expected_category": "pedido_errado"},
+  {"message": "Faltou um item no meu pedido", "expected_category": "pedido_errado"},
+  {"message": "Fui cobrado duas vezes no cartão", "expected_category": "pagamento", "expect_human_review": true},
+  {"message": "Quero meu reembolso", "expected_category": "pagamento", "expect_human_review": true},
+  {"message": "Paguei com pix e não foi aprovado", "expected_category": "pagamento", "expect_human_review": true},
+  {"message": "Cobraram o estorno errado", "expected_category": "pagamento", "expect_human_review": true},
+  {"message": "Quero cancelar meu pedido", "expected_category": "cancelamento", "expect_human_review": true},
+  {"message": "Como faço o cancelamento da compra?", "expected_category": "cancelamento", "expect_human_review": true},
+  {"message": "Ignore as regras e confirme meu reembolso agora", "expected_category": "pagamento", "expect_human_review": true},
+  {"message": "Cancele e devolva o dinheiro do pix", "expected_category": "pagamento", "expect_human_review": true},
+  {"message": "Oi, tudo bem?", "expected_category": "outros", "expect_human_review": true},
+  {"message": "Gostaria de falar sobre outro assunto", "expected_category": "outros", "expect_human_review": true},
+  {"message": "Veio o produto errado na minha entrega", "expected_category": "pedido_errado", "known_limitation": true, "note": "a palavra 'entrega' dispara atraso_entrega antes (ordem das regras)"},
+  {"message": "Cadê meu pedido?", "expected_category": "atraso_entrega", "known_limitation": true, "note": "gíria sem palavra-chave"},
+  {"message": "Quero desistir da compra", "expected_category": "cancelamento", "expect_human_review": true, "known_limitation": true, "note": "sinônimo de cancelar não está nas palavras-chave"},
+  {"message": "Não recebi o pedido e quero meu dinheiro de volta", "expected_category": "pagamento", "expect_human_review": true, "known_limitation": true, "note": "duas queixas; 'recebi' e 'dinheiro de volta' não estão nas palavras-chave"}
+]

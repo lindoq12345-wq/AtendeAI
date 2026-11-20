@@ -25,3 +25,6 @@
 - Resposta ao cliente via LLM (Gemini ou Anthropic) com fallback para FAQ/regras; campo reply_source.
 - response_model no /orchestrate.
 - Executor e supervisor seguem determinísticos; o LLM nunca decide ações.
+
+## 0.5.1
+- Avaliação offline (evals/): 20 casos, métricas de triagem e segurança, relatório em docs/EVAL.md.
