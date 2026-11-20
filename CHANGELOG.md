@@ -15,3 +15,8 @@
 ## 0.1.0 — Estrutura inicial
 
 - Criada API FastAPI com verificação de saúde e classificação básica por regras.
+
+## 0.4.0
+- Fluxo multiagente (customer, research, executor, supervisor) e endpoint POST /orchestrate.
+- Research agent usa a consulta por categoria, como o /assist.
+- Ações sensíveis (pagamento, cancelamento) continuam bloqueadas e vão para revisão humana.
