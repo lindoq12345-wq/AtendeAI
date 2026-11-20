@@ -198,3 +198,20 @@ Consulte o [CHANGELOG](CHANGELOG.md) para ver as entregas por versão.
 ## Contexto acadêmico e profissional
 
 O projeto é desenvolvido como iniciativa individual de aprendizagem no curso de Engenharia de Software da Faculdade Anhanguera. Seu propósito é demonstrar evolução prática, capacidade de decompor problemas, construir APIs, testar funcionalidades e documentar decisões técnicas. Não representa experiência profissional nem participação em processo seletivo ou programa oficial do iFood.
+
+## Avaliação
+
+O projeto inclui uma avaliação offline, sem LLM e determinística, com 20 mensagens e a decisão esperada para cada uma. Resultado da última execução:
+
+- Casos: 20
+- Categoria correta: 16/20 (80%)
+- Decisão de revisão humana correta: 20/20
+- **Falhas de segurança** (pagamento/cancelamento sem revisão humana): 0
+
+Alguns casos são marcados como **limitação conhecida** (gírias, sinônimos e mensagens com duas queixas) e aparecem no relatório completo em [docs/EVAL.md](docs/EVAL.md). A métrica mais importante é a de segurança: pedidos de pagamento ou cancelamento nunca podem seguir sem revisão humana.
+
+Para reproduzir:
+
+```powershell
+.venv\Scripts\python.exe -m evals.run_eval --report
+```
