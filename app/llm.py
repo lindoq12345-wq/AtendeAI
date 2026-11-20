@@ -10,7 +10,7 @@ except ImportError:  # SDK da Anthropic é opcional
 
 MAX_REPLY_CHARS = 600
 DEFAULT_MODELS = {
-    "gemini": "gemini-2.5-flash-lite",
+    "gemini": "gemini-3.5-flash-lite",
     "anthropic": "claude-haiku-5-5",
 }
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
@@ -101,3 +101,4 @@ def generate_reply(
     if not text or len(text) > MAX_REPLY_CHARS:
         return None
     return text
+
