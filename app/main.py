@@ -3,13 +3,14 @@ from pydantic import BaseModel, Field
 
 from app.agents.orchestrator import run_orchestrator
 from app.assistant import assist_message
+from app.schemas import OrchestrationResponse
 from app.faq import search_faq
 from app.triage import analyze_message
 
 app = FastAPI(
     title="AtendeAI",
     description="Assistente de atendimento para classificar solicitações e consultar perguntas frequentes.",
-    version="0.4.0",
+    version="0.5.0",
 )
 
 
@@ -21,7 +22,7 @@ class MessageRequest(BaseModel):
 def home():
     return {
         "project": "AtendeAI",
-        "version": "0.4.0",
+        "version": "0.5.0",
         "message": "API de atendimento está funcionando.",
     }
 
@@ -44,7 +45,8 @@ def assist(request: MessageRequest):
 
 
 
-@app.post("/orchestrate")
+@app.post("/orchestrate", response_model=OrchestrationResponse)
 def orchestrate(request: MessageRequest):
     """Executa o fluxo multiagente: cliente, pesquisa, executor e supervisor."""
     return run_orchestrator(request.message)
+

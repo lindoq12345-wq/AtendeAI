@@ -30,7 +30,7 @@ def test_endpoint_orchestrate():
     response = client.post("/orchestrate", json={"message": "Quero cancelar meu pedido"})
     assert response.status_code == 200
     body = response.json()
-    assert body["version"] == "0.4.0"
+    assert body["version"] == "0.5.0"
     assert body["human_review_required"] is True
 
 
@@ -43,3 +43,4 @@ def test_faq_reference_disponivel_para_revisor_humano():
     assert result["human_review_required"] is True
     assert result["faq_reference"] is not None
     assert result["faq_reference"]["score"] >= 0.6
+

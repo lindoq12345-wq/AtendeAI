@@ -20,3 +20,8 @@
 - Fluxo multiagente (customer, research, executor, supervisor) e endpoint POST /orchestrate.
 - Research agent usa a consulta por categoria, como o /assist.
 - Ações sensíveis (pagamento, cancelamento) continuam bloqueadas e vão para revisão humana.
+
+## 0.5.0
+- Resposta ao cliente via LLM (Gemini ou Anthropic) com fallback para FAQ/regras; campo reply_source.
+- response_model no /orchestrate.
+- Executor e supervisor seguem determinísticos; o LLM nunca decide ações.
